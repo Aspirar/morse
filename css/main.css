@@ -1,0 +1,235 @@
+/*------------------------------------------------.
+|                 General Styles                  |
+`------------------------------------------------*/
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+textarea,
+.page,
+.container,
+.output {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font: 200 12px/16px 'Source Code Pro', monospace;
+    color: white;
+    background-color: black;
+    overflow: hidden;
+}
+
+textarea {
+    display: block;
+    font: inherit;
+    color: inherit;
+    background-color: inherit;
+    border: 0;
+    outline: 0;
+    resize: none;
+}
+
+a, textarea {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*------------------------------------------------.
+|                   Typography                    |
+`------------------------------------------------*/
+
+h1 {
+    font-size: 3em;
+    line-height: 1.5;
+    text-align: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+/*------------------------------------------------.
+|                      Lists                      |
+`------------------------------------------------*/
+
+ul {
+    font-size: 2em;
+    line-height: 3;
+    text-align: center;
+    margin-top: 2em;
+}
+
+/*------------------------------------------------.
+|                     Buttons                     |
+`------------------------------------------------*/
+
+a {
+    position: absolute;
+    width: 100%;
+    display: block;
+    font-size: 2em;
+    line-height: 3;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn {
+    letter-spacing: .2em;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+.btn-bottom {
+    bottom: 0;
+}
+.btn-back {
+    top: 0;
+    text-align: left;
+    font-size: 3em;
+    height: 2.35em;
+    line-height: 1.7;
+    padding-left: 1em;
+    padding-top: .65em;
+}
+@media all and (min-width: 800px) {
+    .btn-back {
+        padding-left: 2em;
+    }
+}
+.btn:active {
+    color: black;
+    background-color: white;
+}
+
+/*------------------------------------------------.
+|                      Pages                      |
+`------------------------------------------------*/
+
+.page {
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    -webkit-transform: scale( 0.8 );
+            transform: scale( 0.8 );
+    -webkit-transition: all 500ms linear;
+            transition: all 500ms linear;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.page.active {
+    z-index: 1000;
+    opacity: 1;
+    -webkit-transform: scale( 1 );
+            transform: scale( 1 );
+}
+
+.container {
+    font-size: 3em;
+    line-height: 1.7;
+    padding-top: 2.35em;
+    padding-bottom: 2em;
+}
+.container.white {
+    color: black;
+    background-color: white;
+}
+
+textarea,
+.output {
+    padding: 0 1em;
+}
+.output {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    min-height: 101%;
+}
+@media all and (min-width: 800px) {
+    textarea,
+    .output {
+        padding: 0 2em;
+    }
+}
+
+.tap-to-cancel {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    font-size: .5em;
+    margin-top: -.25em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+/*------------------------------------------------.
+|                      Home                       |
+`------------------------------------------------*/
+
+.home-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -22.25em;
+}
+
+/*------------------------------------------------.
+|                Morse Code Input                 |
+`------------------------------------------------*/
+
+.half-size {
+    height: 50%;
+}
+
+.input {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    line-height: 1;
+}
+
+.in {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    font-size: 1.5em;
+    margin-top: -.5em;
+}
+.in.space {
+    font-size: .8em;
+    letter-spacing: 0;
+}
+
+/*------------------------------------------------.
+|                     The Code                    |
+`------------------------------------------------*/
+
+table {
+    width: 100%;
+    font-size: .7em;
+    margin-bottom: 2em;
+}
+table:last-child {
+    margin-bottom: 0;
+}
+th {
+    font-size: .8em;
+}
+td {
+    width: 50%;
+    padding: 0 1em;
+    text-align: center;
+}
+th,
+td {
+    line-height: 2.5;
+}

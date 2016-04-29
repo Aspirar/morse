@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en" manifest="cache.manifest">
+    <head>
+        <meta charset="utf-8">
+        <title>Morse Code</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+        <link rel="apple-touch-icon" href="assets/icon.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/icon76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/icon120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/icon152.png">
+        <link rel="apple-touch-startup-image" href="assets/startup.png">
+        
+        <link rel="manifest" href="manifest.json">
+        
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+        <script src="js/model.js" defer></script>
+        <script src="js/main.js" defer></script>
+    </head>
+    
+    <body ontouchstart="">
+        
+        <!----------.
+        | Home Page |
+        `----------->
+        
+        <section id="home-page" class="page active">
+            <div class="home-wrapper">
+                <h1>
+                    __<br>___<br>._.<br>...<br>.
+                </h1>
+                <ul>
+                    <li id="text-to-morse-button" class="btn">text to morse</li>
+                    <li id="morse-to-text-button" class="btn">morse to text</li>
+                    <li id="the-code-button" class="btn">the code</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!----------------.
+        | Text Input Page |
+        `----------------->
+        
+        <section id="text-input-page" class="page">
+            <div class="container">
+                <textarea id="text-input-box" placeholder="Enter text."></textarea>
+            </div>
+            <a href="#" class="btn btn-back">&lt;</a>
+            <a id="text-translate-button" href="#" class="btn btn-bottom">translate</a>
+        </section>
+        
+        <!------------------------.
+        | Morse Code Display Page |
+        `------------------------->
+        
+        <section id="morse-display-page" class="page">
+            <div class="container">
+                <div class="wrap"><section id="morse-output-box" class="output"></section></div>
+            </div>
+            <a href="#" class="btn btn-back">&lt;</a>
+            <a id="play-button" href="#" class="btn btn-bottom">play</a>
+        </section>
+        
+        <!----------------------.
+        | Morse Code Input Page |
+        `----------------------->
+        
+        <section id="morse-input-page" class="page">
+            <div class="container">
+                <textarea id="morse-input-box" class="half-size" placeholder="Enter morse code."></textarea>
+                <section class="half-size">
+                    <div id="dot-input-button" class="input btn"><div class="in">.</div></div><!--
+                    --><div id="dash-input-button" class="input btn"><div class="in">_</div></div><!--
+                    --><div id="slash-input-button" class="input btn"><div class="in">/</div></div><!--
+                    --><div id="space-input-button" class="input btn"><div class="in space">(space)</div></div>
+                </section>
+            </div>
+            <a href="#" class="btn btn-back">&lt;</a>
+            <a id="morse-translate-button" href="#" class="btn btn-bottom">translate</a>
+        </section>
+        
+        <!------------------.
+        | Text Display Page |
+        `------------------->
+        
+        <section id="text-display-page" class="page">
+            <div class="container">
+                <div class="wrap"><section id="text-output-box" class="output"></section></div>
+            </div>
+            <a href="#" class="btn btn-back">&lt;</a>
+        </section>
+        
+        <!----------.
+        | Play Page |
+        `----------->
+        
+        <section id="play-page" class="page">
+            <div class="container">
+                <div class="tap-to-cancel">tap to cancel</div>
+            </div>
+        </section>
+        
+        <!----------------.
+        | Morse Code Page |
+        `----------------->
+        
+        <section id="the-code-page" class="page">
+            <div class="container">
+                <section class="output">
+                    <table>
+                        <tr>
+                            <th colspan="2">letters</th>
+                        </tr>
+                        <tr>
+                            <td>a</td>
+                            <td>._</td>
+                        </tr>
+                        <tr>
+                            <td>b</td>
+                            <td>_...</td>
+                        </tr>
+                        <tr>
+                            <td>c</td>
+                            <td>_._.</td>
+                        </tr>
+                        <tr>
+                            <td>d</td>
+                            <td>_..</td>
+                        </tr>
+                        <tr>
+                            <td>e</td>
+                            <td>.</td>
+                        </tr>
+                        <tr>
+                            <td>f</td>
+                            <td>__._</td>
+                        </tr>
+                        <tr>
+                            <td>g</td>
+                            <td>__.</td>
+                        </tr>
+                        <tr>
+                            <td>h</td>
+                            <td>....</td>
+                        </tr>
+                        <tr>
+                            <td>i</td>
+                            <td>..</td>
+                        </tr>
+                        <tr>
+                            <td>j</td>
+                            <td>.___</td>
+                        </tr>
+                        <tr>
+                            <td>k</td>
+                            <td>_._</td>
+                        </tr>
+                        <tr>
+                            <td>l</td>
+                            <td>._..</td>
+                        </tr>
+                        <tr>
+                            <td>m</td>
+                            <td>__</td>
+                        </tr>
+                        <tr>
+                            <td>n</td>
+                            <td>_.</td>
+                        </tr>
+                        <tr>
+                            <td>o</td>
+                            <td>___</td>
+                        </tr>
+                        <tr>
+                            <td>p</td>
+                            <td>.__.</td>
+                        </tr>
+                        <tr>
+                            <td>q</td>
+                            <td>__._</td>
+                        </tr>
+                        <tr>
+                            <td>r</td>
+                            <td>._.</td>
+                        </tr>
+                        <tr>
+                            <td>s</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>t</td>
+                            <td>_</td>
+                        </tr>
+                        <tr>
+                            <td>u</td>
+                            <td>.._</td>
+                        </tr>
+                        <tr>
+                            <td>v</td>
+                            <td>..._</td>
+                        </tr>
+                        <tr>
+                            <td>w</td>
+                            <td>.__</td>
+                        </tr>
+                        <tr>
+                            <td>x</td>
+                            <td>_.._</td>
+                        </tr>
+                        <tr>
+                            <td>y</td>
+                            <td>_.__</td>
+                        </tr>
+                        <tr>
+                            <td>z</td>
+                            <td>__..</td>
+                        </tr>
+                    </table>
+                    
+                    <table>
+                        <tr>
+                            <th colspan="2">numbers</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>.____</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>..___</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>...__</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>...._</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>.....</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>_....</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>__...</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>___..</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>____.</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>_____</td>
+                        </tr>
+                    </table>
+                    
+                    <table>
+                        <tr>
+                            <th colspan="2">special symbols</th>
+                        </tr>
+                        <tr>
+                            <td>.</td>
+                            <td>._._._</td>
+                        </tr>
+                        <tr>
+                            <td>,</td>
+                            <td>__..__</td>
+                        </tr>
+                        <tr>
+                            <td>:</td>
+                            <td>___...</td>
+                        </tr>
+                        <tr>
+                            <td>?</td>
+                            <td>..__..</td>
+                        </tr>
+                        <tr>
+                            <td>&#39;</td>
+                            <td>.____.</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>_...._</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>_.._.</td>
+                        </tr>
+                        <tr>
+                            <td>&quot;</td>
+                            <td>._.._.</td>
+                        </tr>
+                        <tr>
+                            <td>@</td>
+                            <td>.__._.</td>
+                        </tr>
+                        <tr>
+                            <td>=</td>
+                            <td>_..._</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+            <a href="#" class="btn btn-back">&lt;</a>
+        </section>
+    </body>
+</html>
