@@ -171,28 +171,32 @@ window.addEventListener('load', function () {
         APP.translateMorse();
         APP.showPage(APP.pages.textDisplay);
     });
-//    APP.buttons.morseInput.dot.addEventListener('mousedown', function () {
-//        APP.input.morse.value += '.';
-//    });
-//    APP.buttons.morseInput.dash.addEventListener('mousedown', function () {
-//        APP.input.morse.value += '_';
-//    });
-//    APP.buttons.morseInput.slash.addEventListener('mousedown', function () {
-//        APP.input.morse.value += '/';
-//    });
-//    APP.buttons.morseInput.space.addEventListener('mousedown', function () {
-//        APP.input.morse.value += ' ';
-//    });
-    APP.buttons.morseInput.dot.addEventListener('touchstart', function () {
+   APP.buttons.morseInput.dot.addEventListener('mousedown', function () {
+       APP.input.morse.value += '.';
+   });
+   APP.buttons.morseInput.dash.addEventListener('mousedown', function () {
+       APP.input.morse.value += '_';
+   });
+   APP.buttons.morseInput.slash.addEventListener('mousedown', function () {
+       APP.input.morse.value += '/';
+   });
+   APP.buttons.morseInput.space.addEventListener('mousedown', function () {
+       APP.input.morse.value += ' ';
+   });
+    APP.buttons.morseInput.dot.addEventListener('touchstart', function (e) {
+        e.preventDefault();
         APP.input.morse.value += '.';
     });
-    APP.buttons.morseInput.dash.addEventListener('touchstart', function () {
+    APP.buttons.morseInput.dash.addEventListener('touchstart', function (e) {
+        e.preventDefault();
         APP.input.morse.value += '_';
     });
-    APP.buttons.morseInput.slash.addEventListener('touchstart', function () {
+    APP.buttons.morseInput.slash.addEventListener('touchstart', function (e) {
+        e.preventDefault();
         APP.input.morse.value += '/';
     });
-    APP.buttons.morseInput.space.addEventListener('touchstart', function () {
+    APP.buttons.morseInput.space.addEventListener('touchstart', function (e) {
+        e.preventDefault();
         APP.input.morse.value += ' ';
     });
     APP.buttons.play.addEventListener('click', function (e) {
