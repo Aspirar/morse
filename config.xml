@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.aspirar.morse" version="0.1" xmlns="http://www.w3.org/ns/widgets">
+  <name>Morse</name>
+  <description>Convert text to morse code, and morse code to text.</description>
+  <author email="aspirar@outlook.com" href="http://github.com/Aspirar">Lakshya Gupta</author>
+  <preference name="permissions" value="none" />
+  <preference name="target-device" value="universal" />
+</widget>
